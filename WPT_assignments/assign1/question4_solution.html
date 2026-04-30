@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Full Practice</title>
+
+  <!-- CSS HOW TO (Internal CSS) -->
+  <style>
+    /* CSS COMMENTS */
+    /* This is a CSS comment */
+
+    /* CSS SELECTORS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4; /* CSS BACKGROUND */
+    }
+
+    /* CLASS SELECTOR */
+    .box {
+      background-color: lightblue; /* CSS COLORS */
+      border: 2px solid navy;      /* CSS BORDERS */
+      margin: 20px;                /* CSS MARGINS */
+      padding: 15px;               /* CSS PADDING */
+      width: 80%;                  /* CSS WIDTH */
+      height: auto;               /* CSS HEIGHT */
+      outline: 3px dashed red;     /* CSS OUTLINE */
+    }
+
+    /* ID SELECTOR */
+    #title {
+      color: darkgreen; /* CSS COLORS */
+      text-align: center; /* CSS TEXT */
+    }
+
+    /* ELEMENT SELECTOR */
+    p {
+      color: #333;
+      line-height: 1.6; /* TEXT STYLING */
+    }
+
+    /* BOX MODEL DEMO */
+    .box-model {
+      background: white;
+      border: 5px solid black;
+      padding: 20px;
+      margin: 30px;
+    }
+
+    /* CSS TEXT */
+    .text-demo {
+      color: purple;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* CSS BACKGROUND */
+    .bg-demo {
+      background-image: linear-gradient(to right, pink, yellow);
+      padding: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- CSS INTRODUCTION -->
+  <h1 id="title">CSS Complete Practice Page</h1>
+
+  <!-- CSS SELECTORS + BOX MODEL -->
+  <div class="box">
+    <h2>CSS Selectors, Borders, Margin, Padding</h2>
+    <p>This box demonstrates multiple CSS properties together.</p>
+  </div>
+
+  <!-- CSS BACKGROUNDS -->
+  <div class="bg-demo">
+    <h2>CSS Backgrounds</h2>
+    <p>This section uses gradient background.</p>
+  </div>
+
+  <!-- CSS BOX MODEL -->
+  <div class="box-model">
+    <h2>CSS Box Model</h2>
+    <p>
+      Content → Padding → Border → Margin
+    </p>
+  </div>
+
+  <!-- CSS TEXT -->
+  <div class="box">
+    <h2>CSS Text Styling</h2>
+    <p class="text-demo">This text is styled using CSS text properties.</p>
+  </div>
+
+  <!-- INLINE CSS (HOW TO) -->
+  <div style="background-color: lightgreen; padding: 10px; margin: 20px;">
+    <h2>Inline CSS Example</h2>
+    <p>This uses inline CSS (not recommended for large projects).</p>
+  </div>
+
+</body>
+
+</html>

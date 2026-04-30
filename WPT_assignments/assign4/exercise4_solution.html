@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4</title>
+</head>
+<body>
+
+<h2>Exercise 4 Output (Error Handling)</h2>
+<div id="output">Waiting for response...</div>
+
+<script>
+    const outputDiv = document.getElementById("output");
+
+    function fetchData(url, callback) {
+        console.log("Fetching data from:", url);
+
+        setTimeout(() => {
+            const isError = Math.random() < 0.5; // simulate error randomly
+
+            if (isError) {
+                callback("Error: Failed to fetch data", null);
+            } else {
+                callback(null, "Data received from " + url);
+            }
+        }, 2000);
+    }
+
+    fetchData("https://api.example.com", function(error, response) {
+        if (error) {
+            console.error(error);
+            outputDiv.innerHTML = error;
+        } else {
+            console.log(response);
+            outputDiv.innerHTML = response;
+        }
+    });
+</script>
+
+</body>
+</html>

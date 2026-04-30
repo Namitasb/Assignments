@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container text-center mt-5">
+    <h1 class="mb-4"> Joke Generator</h1>
+
+    <!-- Button -->
+    <button id="jokeBtn" class="btn btn-primary mb-3">Get Joke</button>
+
+    <!-- Loader -->
+    <div id="loader" class="spinner-border text-primary d-none" role="status"></div>
+
+    <!-- Joke Display -->
+    <div id="jokeBox" class="card mt-3 p-3 shadow">
+        <p id="jokeText">Click the button to get a joke!</p>
+    </div>
+
+    <!-- Error -->
+    <p id="errorText" class="text-danger mt-2"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3f51b5;
+            text-decoration: underline;
+            margin-bottom: 15px;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 720px;
+            margin: auto;
+            background: #5f57c8;
+            padding: 20px;
+            border: 2px solid #3d3aa3;
+        }
+
+        table {
+            width: 100%;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        td {
+            padding: 6px 8px;
+            vertical-align: middle;
+        }
+
+        .label {
+            width: 180px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 160px;
+            height: 20px;
+            border: none;
+            padding: 2px 5px;
+        }
+
+        textarea {
+            width: 320px;
+            height: 80px;
+            border: none;
+        }
+
+        select {
+            height: 22px;
+        }
+
+        .small-text {
+            font-size: 11px;
+            color: #e0e0e0;
+            margin-left: 5px;
+        }
+
+        /* Qualification table fix */
+        .qual-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 5px;
+            table-layout: fixed;
+        }
+
+        .qual-table td {
+           
+            text-align: center;
+            padding: 4px;
+        }
+
+        .qual-table input {
+            width: 100%;
+            height: 20px;
+            border: none;
+            padding: 2px;
+        }
+
+        .footer-note {
+            font-size: 11px;
+            color: #e0e0e0;
+            text-align: center;
+            margin-top: 3px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .btn {
+            padding: 4px 10px;
+            margin: 10px 5px;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .dob {
+            width: 60px;
+             height: 22px;
+             border: 1px solid #999;
+               background-color: #ffffff;
+             font-size: 12px;
+             margin-right: 5px;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<h2>STUDENT REGISTRATION FORM</h2>
+
+<div class="container">
+
+<form>
+
+<table>
+
+<tr>
+    <td class="label">FIRST NAME</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(max 30 characters a-z and A-Z)</span>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">LAST NAME</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(max 30 characters a-z and A-Z)</span>
+    </td>
+</tr>
+
+<tr>
+   <td class="label">DATE OF BIRTH</td>
+    <td>
+        <select class="dob">
+            <option>Day</option>
+        </select>
+        <select class="dob">
+            <option>Month</option>
+        </select>
+        <select class="dob">
+            <option>Year</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">EMAIL ID</td>
+    <td><input type="email"></td>
+</tr>
+
+<tr>
+    <td class="label">MOBILE NUMBER</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(10 digit number)</span>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">GENDER</td>
+    <td>
+        Male <input type="radio" name="g">
+        Female <input type="radio" name="g">
+    </td>
+</tr>
+
+<tr>
+    <td class="label">ADDRESS</td>
+    <td><textarea></textarea></td>
+</tr>
+
+<tr>
+    <td class="label">CITY</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(max 30 characters a-z and A-Z)</span>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">PIN CODE</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(6 digit number)</span>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">STATE</td>
+    <td>
+        <input type="text">
+        <span class="small-text">(max 30 characters a-z and A-Z)</span>
+    </td>
+</tr>
+
+<tr>
+    <td class="label">COUNTRY</td>
+    <td><input type="text" value="India"></td>
+</tr>
+
+<tr>
+    <td class="label">HOBBIES</td>
+    <td>
+        Drawing <input type="checkbox">
+        Singing <input type="checkbox">
+        Dancing <input type="checkbox">
+        Sketching <input type="checkbox"><br>
+        Others <input type="checkbox">
+        <input type="text" style="width:120px;">
+    </td>
+</tr>
+
+<tr>
+    <td class="label">QUALIFICATION</td>
+    <td>
+
+        <table class="qual-table">
+            <tr>
+                <td>Sl.No</td>
+                <td>Examination</td>
+                <td>Board</td>
+                <td>Percentage</td>
+                <td>Year</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+        </table>
+
+        <div class="footer-note">
+            (10 char max) &nbsp;&nbsp;&nbsp;&nbsp; (upto 2 decimal)
+        </div>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="label">COURSES APPLIED FOR</td>
+    <td>
+        BCA <input type="radio" name="course">
+        B.Com <input type="radio" name="course">
+        B.Sc <input type="radio" name="course">
+        B.A <input type="radio" name="course">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" class="center">
+        <input type="submit" value="Submit" class="btn">
+        <input type="reset" value="Reset" class="btn">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+</body>
+</html>

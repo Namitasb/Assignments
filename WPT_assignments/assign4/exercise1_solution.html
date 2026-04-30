@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 1</title>
+</head>
+<body>
+
+<h2>Exercise 1 Output</h2>
+<div id="output"></div>
+
+<script>
+    const outputDiv = document.getElementById("output");
+
+    function processData(str, callback) {
+        return callback(str);
+    }
+
+    function toUpperCase(str) {
+        return str.toUpperCase();
+    }
+
+    const result = processData("hello world", toUpperCase);
+
+    console.log(result);
+    outputDiv.innerHTML = result;
+</script>
+
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback Exercises</title>
+</head>
+<body>
+
+<h2>Callback Function Exercises</h2>
+
+<div id="output"></div>
+
+<script>
+function processData(str, callback) {
+    const result = callback(str);
+    console.log(result);
+}
+
+function toUpperCase(input) {
+    return input.toUpperCase();
+}
+
+// Calling the function
+processData("hello world", toUpperCase);
+
+</script>
+
+</body>
+</html>
+
+Extracted Questions
+Exercise 1
+
+Create a function processData that takes two parameters: a string and a callback function. Your task is to write a callback that converts the string to uppercase and then call it within processData.
+
+Requirements:
+Define a function toUpperCase that will serve as a callback.
+Pass a string and toUpperCase to processData and log the output.
+Exercise 2
+
+Write a function forEachElement that accepts an array and a callback. This function should apply the callback to each element of the array.
+
+Requirements:
+Pass an anonymous function as the callback that multiplies each element by 2 and logs the result with the index.
+Exercise 3
+
+Simulate a network request by creating a function fetchData that takes a URL and a callback as parameters. Use setTimeout to simulate a delay and then call the callback with a string representing a response.
+
+Requirements:
+After a delay, log the “response” to the console.
+
+Exercise 4:
+
+Modify fetchData from Exercise 3 to include error handling.
+
+Requirements:
+Call the callback with an error message if an error occurs; otherwise, pass the “response.”
+Handle the error gracefully by logging it if it occurs.
+Exercise 5:
+
+Using fetchData from Exercise 4, create another function processData that simulates processing the fetched data. Chain these functions together using nested callbacks.
+
+Requirements:
+First, call fetchData. Once the response is received, pass it to processData.
+processData should modify the data and log the processed result.ss-->

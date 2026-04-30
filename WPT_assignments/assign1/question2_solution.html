@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- HTMLHead -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Full Practice</title>
+
+  <style>
+    /* HTMLClasses + HTMLId */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header, footer {
+      background: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    #main-title {
+      color: orange;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        background: #f2f2f2;
+      }
+
+      .card {
+        font-size: 14px;
+      }
+    }
+
+    /* Inline vs Block demonstration */
+    .inline-demo span {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HTMLLayout + Semantics -->
+  <header>
+    <h1 id="main-title">HTML Complete Practice Page</h1>
+  </header>
+
+  <nav class="container">
+    <a href="#">Home</a> |
+    <a href="#">About</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- HTMLBlock & Inline -->
+    <section class="card">
+      <h2>Block & Inline Elements</h2>
+      <div>This is a block element (div)</div>
+      <p>This is another block element (p)</p>
+
+      <div class="inline-demo">
+        Inline example:
+        <span>Text 1</span>
+        <span>Text 2</span>
+      </div>
+    </section>
+
+    <!-- HTMLDiv + Classes + Id -->
+    <section class="card" id="section-div">
+      <h2>Div, Class & ID</h2>
+      <div class="box">
+        This is inside a div with class "box"
+      </div>
+    </section>
+
+    <!-- HTMLFilepaths -->
+    <section class="card">
+      <h2>File Paths</h2>
+      <p>Relative image:</p>
+      <img src="images/sample.jpg" alt="Sample Image" width="150">
+
+      <p>Absolute image:</p>
+      <img src="https://via.placeholder.com/150" alt="Online Image">
+    </section>
+
+    <!-- HTMLIframes -->
+    <section class="card">
+      <h2>Iframe Example</h2>
+      <iframe src="https://example.com" width="300" height="150"></iframe>
+    </section>
+
+    <!-- HTMLSemantics -->
+    <section class="card">
+      <h2>Semantic Tags</h2>
+      <article>
+        <h3>Article Title</h3>
+        <p>This is an article inside semantic structure.</p>
+      </article>
+    </section>
+
+    <!-- HTMLForms + Form Attributes -->
+    <section class="card">
+      <h2>HTML Form Example</h2>
+
+      <form action="/submit" method="POST" id="myForm" autocomplete="on">
+
+        <!-- HTMLInput Types + Attributes -->
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter name" required>
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter email">
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" minlength="6">
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" min="1" max="100">
+
+        <br><br>
+
+        <label>Date:</label>
+        <input type="date" name="dob">
+
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+
+        <br><br>
+
+        <label>Skills:</label>
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS
+
+        <br><br>
+
+        <label>Country:</label>
+        <select name="country">
+          <option>India</option>
+          <option>USA</option>
+        </select>
+
+        <br><br>
+
+        <textarea placeholder="Write message"></textarea>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- HTMLLayout Footer -->
+  <footer>
+    <p>Footer Section © 2026</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+
+<h2>Exercise 5 Output (Callback Chaining)</h2>
+<div id="output">Processing...</div>
+
+<script>
+    const outputDiv = document.getElementById("output");
+
+    function fetchData(url, callback) {
+        console.log("Fetching data from:", url);
+
+        setTimeout(() => {
+            const isError = false; // you can change to true to test error
+
+            if (isError) {
+                callback("Error: Failed to fetch data", null);
+            } else {
+                callback(null, "Data received from " + url);
+            }
+        }, 2000);
+    }
+
+    function processData(data, callback) {
+        console.log("Processing data...");
+
+        const processed = data.toUpperCase(); // modify data
+        callback(processed);
+    }
+
+    // chaining (nested callbacks)
+    fetchData("https://api.example.com", function(error, response) {
+        if (error) {
+            console.error(error);
+            outputDiv.innerHTML = error;
+        } else {
+            processData(response, function(result) {
+                console.log("Processed Result:", result);
+                outputDiv.innerHTML = result;
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

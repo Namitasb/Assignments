@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 2</title>
+</head>
+<body>
+
+<h2>Exercise 2 Output</h2>
+<div id="output"></div>
+
+<script>
+    const outputDiv = document.getElementById("output");
+
+    function forEachElement(arr, callback) {
+        for (let i = 0; i < arr.length; i++) {
+            callback(arr[i], i);
+        }
+    }
+
+    const numbers = [1, 2, 3, 4];
+
+    forEachElement(numbers, function(element, index) {
+        const result = element * 2;
+        const message = "Index " + index + ", Value " + result;
+
+        console.log(message);
+        outputDiv.innerHTML += message + "<br>";
+    });
+</script>
+
+</body>
+</html>
+<!--function forEachElement(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], i);
+    }
+}
+
+// Calling with anonymous function
+forEachElement([1, 2, 3, 4], function(element, index) {
+    console.log(`Index ${index}: ${element * 2}`);
+});-->
